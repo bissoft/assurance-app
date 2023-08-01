@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.table_recorded_links a {
+  color: #5a6a85;
+  font-size: 20px;
+}
+
+.input_increment_decerment.input {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.input_increment_decerment .btn {
+  font-size: 20px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.input_increment_decerment .number {
+  text-align: center;
+  padding: 0 20px;
+}
+
+/*form styles*/
+#msform {
+  position: relative;
+  margin-top: 30px;
+}
+
+#msform fieldset {
+  position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/*inputs*/
+#msform input,
+#msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+
+  color: #2c3e50;
+  font-size: 13px;
+}
+
+#msform input:focus,
+#msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #2098ce;
+  outline-width: 0;
+  transition: All 0.5s ease-in;
+  -webkit-transition: All 0.5s ease-in;
+  -moz-transition: All 0.5s ease-in;
+  -o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+  width: 100px;
+  background: #2098ce;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #2098ce;
+}
+
+#msform .action-button-previous {
+  width: 100px;
+  background: #acbed0;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #acbed0;
+}
+
+/*headings*/
+.fs-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+
+#progressbar li {
+  list-style-type: none;
+  color: #666;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33%;
+  float: left;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 24px;
+  height: 24px;
+  line-height: 26px;
+  display: block;
+  font-size: 12px;
+  color: #333;
+  background: white;
+  border-radius: 25px;
+  margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none;
+}
+
+/*marking active/completed steps blue*/
+/*The number of the step and the connector before it = blue*/
+#progressbar li.active:before,
+#progressbar li.active:after {
+  background: #2098ce;
+  color: white;
+}
+
+#msform fieldset label {
+  text-align: left !important;
+}
+
+.app-header {
+  padding: 0px;
+  background: #fff;
+}
+.app-header .navbar {
+  padding: 0 15px;
+}
+
+.app-header.fixed-header {
+  padding: 0px;
+  background: #fff;
+}
+
+#main-wrapper[data-layout="vertical"] .app-header.fixed-header {
+  transition: 0.1s ease-in;
+}
+
+#main-wrapper[data-layout="vertical"] .app-header.fixed-header .navbar {
+  background: transparent;
+  padding: 0 15px;
+  border-radius: 0;
+  box-shadow: none;
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav .dropdown-menu.content-dd.dropdoen_profiles {
+    width: 150px;
+  }
+}
+
+.camparion_board .feathures_table {
+  border-bottom: 1px solid #ffffff;
+  background-color: #2f80ed;
+  padding: 8px 10px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.camparion_board .functionality {
+  border-bottom: 1px solid #ffffff;
+  background-color: #e6f4fd;
+  font-size: 12px;
+  padding: 5px;
+}
+.camparion_board td {
+  padding: 5px;
+  font-size: 10px;
+}
+
+.camparion_board h2 {
+  font-size: 22px;
+  padding: 5px;
+  margin-bottom: 0px;
+}
+
+.build_boxes {
+  border-radius: 30px;
+  background: #fbfbfb;
+  /* Shadow effect */
+  box-shadow: 16px 16px 35px 10px rgba(0, 0, 0, 0.09);
+
+  display: block;
+
+  padding: 15px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.build_boxes:hover {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.theme_colors_btn {
+  border-radius: 10px;
+  background: #3198f5;
+  color: #fff;
+  text-align: center;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 80%;
+}
+.theme_colors_btn:hover {
+  background: #3198f5;
+  color: #fff;
+}
+
+.build_boxes img {
+  width: 100%;
+  height: 150px;
+}
+.build_boxes h4 {
+  color: #42445d;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.build_boxes p {
+  color: #42445d;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.template_form_box .copy,
+.template_form_box .trash {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.form_template .theme_colors_btn {
+  width: auto;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.form_template .theme_colors_btn i {
+  border: 1px solid #fff;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+
+.template_form_box h4 {
+  font-size: 14px;
+  color: #333;
+}
+.template_form_box {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.brand-logo,
+.left-sidebar .scroll-sidebar {
+  background-color: #f6f7fc;
+}
+
+.sidebar-nav ul .sidebar-item .sidebar-link {
+  color: #8e8d8d;
+  border-radius: 16px;
+}
+.table_Camparision table thead tr {
+  background: #0859e7;
+  color: #fff;
+}
+.table_Camparision table thead th {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+.table_Camparision table .general_term {
+  background: #fff;
+}
+.table_Camparision table td {
+  background-color: #f7f7f8;
+  border: 1px solid #b9b9ba;
+}
+
+.first_part {
+  width: 150px;
+}
+.app-header {
+  box-shadow: 16px 16px 35px 0px rgba(0, 0, 0, 0.09);
+}
+
+.contact_modal_design .modal-header {
+  background: #3198f5;
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_modal_design .modal-header h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 0px;
+}
+
+.btn-primary {
+  background-color: #3198f5;
+}
+.btn-primary:hover {
+  background-color: #3198f5;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+.collapsible-table {
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.023);
+  margin-bottom: 10px;
+  transition: all ease-in-out 0.3s;
+}
+ 
+.collapsible-table .base-row td {
+  height: 100%;
+  border-bottom: 1px solid lightgray;
+}
+.collapsible-table .base-row td:not(:last-child) {
+  padding: 15px;
+}
+.collapsible-table .base-row:not(:nth-last-child(2)) {
+  /*border-bottom:1px solid lightgray;*/
+}
+.collapsible-table .baserow.open td {
+  border-bottom: none;
+}
+.collapsible-table .details-row td {
+  display: none;
+}
+.collapsible-table .details-row .details {
+  display: none;
+  padding: 15px 15px 15px 15px;
+  background-color: #f9f9f9;
+}
+
+ 
+ 
+ .sortable-table {
+    width: 100%;
+ }
+
+ .sortable-table_firsthead {
+    width: 200px;
+ }
+
+ .template_form_box_inputfield .form-control {
+    width: 300px;
+ }
